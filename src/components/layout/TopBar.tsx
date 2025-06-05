@@ -26,8 +26,8 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
 
       <div className="flex items-center gap-2 sm:gap-6 w-full md:w-auto justify-end sm:pr-14">
         <div className="relative">
-          <Bell className="text-gray-500 w-4 sm:w-4" />
-          <span className="absolute sm:top-0 sm:right-0 top-1 right-1 block sm:h-1.5 sm:w-1.5 h-1.5 w-1.5 rounded-full bg-red-500"></span>
+          <Bell className="text-gray-500 w-6" />
+          <span className="absolute sm:top-0 sm:right-0 top-1 right-1 block sm:h-2 sm:w-2 h-1.5 w-1.5 rounded-full bg-red-500"></span>
         </div>
 
         <div className="flex items-center gap-2 py-2">

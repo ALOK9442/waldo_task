@@ -17,7 +17,7 @@ export const StatCard = ({ title, value }: StatCardProps) => (
     <CardContent className="p-0 flex justify-between">
       <CardContent className="p-0 flex flex-col gap-2">
         <CardHeader className="p-0">
-          <CardTitle className="text-sm text-gray-700 font-medium sm:whitespace-normal md:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap">
+          <CardTitle className="text-sm text-gray-700 font-medium md:whitespace-nowrap lg:whitespace-normal xl:whitespace-nowrap whitespace-nowrap">
             {title}
           </CardTitle>
         </CardHeader>
