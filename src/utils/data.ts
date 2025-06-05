@@ -3,7 +3,8 @@ export const orders = new Array(10).fill(null).map(() => ({
   type: "electronics",
   arrival: "4/13/2025",
   weight: "25 KG",
-  route: "San Francisco → New York",
+  route: "San Francisco > New York",
   fee: "$2000",
   status: "Delivered",
 }));
+

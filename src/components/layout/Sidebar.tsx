@@ -1,30 +1,67 @@
-import { LayoutDashboard, Package, ShoppingCart, Users, Star, CreditCard, Settings } from 'lucide-react';
+import {
+  LayoutDashboard,
+  Settings,
+  ShoppingBag,
+  Rows3,
+  SquareUser,
+  ShoppingCart,
+  MessageSquareHeart,
+  ChevronDown,
+} from "lucide-react";
 
 const menu = [
-  { name: "Dashboard", icon: LayoutDashboard },
-  { name: "Product", icon: Package },
-  { name: "Orders", icon: ShoppingCart },
-  { name: "Customers", icon: Users },
-  { name: "Manage Reviews", icon: Star },
-  { name: "Checkout", icon: CreditCard },
-  { name: "Settings", icon: Settings },
+  { name: "Dashboard", icon: LayoutDashboard, expandable: false },
+  { name: "Product", icon: ShoppingBag, expandable: true },
+  { name: "Orders", icon: Rows3, expandable: true },
+  { name: "Customers", icon: SquareUser, expandable: true },
+  { name: "Manage Reviews", icon: MessageSquareHeart, expandable: false },
+  { name: "Checkout", icon: ShoppingCart, expandable: false },
+  { name: "Settings", icon: Settings, expandable: false },
 ];
 
 export default function Sidebar() {
+  const activeItem = "Dashboard";
+
   return (
-    <aside className="bg-[#ffffff] w-64 min-h-screen hidden md:flex flex-col shadow-lg">
-      <div className="flex items-center gap-2 px-6 py-4 text-xl font-bold">
-        <img src="/logo.png" alt="logo" />
-        {/* <span className="text-indigo-600">Shipping <span className="text-indigo-600">Plus</span></span> */}
+    <div className="bg-white min-h-screen flex flex-col w-64">
+      <div className="flex items-center px-6 pt-6 pb-4 mb-10">
+        <img src="/shippingicon.png" alt="logo" className="w-40" />
       </div>
-      <nav className="mt-4 flex flex-col gap-2 px-4">
-        {menu.map(({ name, icon: Icon }) => (
-          <a href="#" key={name} className="flex items-center gap-3 p-2 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300">
-            <Icon size={18} />
-            {name}
-          </a>
-        ))}
+      <nav className="flex flex-col gap-1 px-4">
+        {menu.map(({ name, icon: Icon, expandable }) => {
+          const isActive = name === activeItem;
+          return (
+            <a
+              key={name}
+              href="#"
+              className={`flex items-center justify-between group px-2 py-2 text-sm font-medium text-gray-600 rounded-md ${
+                isActive ? "bg-[#e5e4ff]" : ""
+              }`}
+            >
+              <div className={`flex items-center gap-3 `}>
+                <div
+                  className={`w-8 h-8 flex items-center justify-center rounded-full ${
+                    isActive ? "bg-[#e5e4ff]" : ""
+                  }`}
+                >
+                  <Icon
+                    size={20}
+                    className={isActive ? "text-[#5b3cf0]" : "text-gray-500"}
+                    // fill="#9E9E9E"
+                  />
+                </div>
+                <span>{name}</span>
+              </div>
+              {expandable && (
+                <ChevronDown
+                  size={16}
+                  className="text-gray-400 group-hover:text-gray-600"
+                />
+              )}
+            </a>
+          );
+        })}
       </nav>
-    </aside>
+    </div>
   );
 }
