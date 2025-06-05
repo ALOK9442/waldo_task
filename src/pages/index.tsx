@@ -4,7 +4,7 @@ import { StatCard } from "../components/StatCard";
 import { ShipmentCard } from "../components/ShipMentCard";
 import { OrderTable } from "../components/OrderTable";
 import { orders } from "../utils/data";
-import { ShipMentMap } from "../components/shipMentMap";
+import { ShipMentMap } from "../components/ShipMentMap";
 
 export default function Home() {
   return (
