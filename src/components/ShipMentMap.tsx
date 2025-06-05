@@ -1,4 +1,4 @@
-export const ShipmentMap = () => {
+export const ShipMentMap = () => {
   return (
     <div className="flex flex-col h-full w-full basis-1/2">
       <h3 className="text-xl font-semibold mb-2 text-gray-700">On the Way</h3>

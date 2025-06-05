@@ -4,7 +4,7 @@ import { StatCard } from "../components/StatCard";
 import { ShipmentCard } from "../components/ShipMentCard";
 import { OrderTable } from "../components/OrderTable";
 import { orders } from "../utils/data";
-import { ShipmentMap } from "../components/shipMentMap";
+import { ShipMentMap } from "../components/shipMentMap";
 
 export default function Home() {
   return (
@@ -38,7 +38,7 @@ export default function Home() {
             dropoffLocation="1070 street st yard main glasco, san Francisco"
           />
         </div>
-        <ShipmentMap />
+        <ShipMentMap />
       </div>
 
       <OrderTable orders={orders} />
