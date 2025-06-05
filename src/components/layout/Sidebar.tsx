@@ -47,7 +47,6 @@ export default function Sidebar() {
                   <Icon
                     size={20}
                     className={isActive ? "text-[#5b3cf0]" : "text-gray-500"}
-                    // fill="#9E9E9E"
                   />
                 </div>
                 <span>{name}</span>

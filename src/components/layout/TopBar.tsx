@@ -7,7 +7,6 @@ interface TopbarProps {
 export default function Topbar({ onMenuClick }: TopbarProps) {
   return (
     <header className="w-full flex justify-between items-center px-4 py-6 bg-[#ffffff]">
-
       <button
         onClick={onMenuClick}
         className="md:hidden p-2 rounded-md hover:bg-gray-100"
@@ -23,7 +22,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
           className="px-4 py-2 pl-10 w-full md:w-1/3 text-sm text-gray-500 font-semibold outline-none"
         />
       </div>
-      <div className="flex items-center gap-2 sm:gap-6 w-full md:w-auto justify-end sm:pr-10">
+      <div className="flex items-center gap-2 sm:gap-6 w-full md:w-auto justify-end sm:pr-14">
         <div className="relative">
           <Bell className="text-gray-500 w-4 sm:w-6" />
           <span className="absolute sm:top-0 sm:right-0 top-1 right-1 block sm:h-2 sm:w-2 h-1 w-1 rounded-full bg-red-500 ring-2 ring-white"></span>

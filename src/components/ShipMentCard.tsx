@@ -39,7 +39,6 @@ export const ShipmentCard = ({
             <p className="text-sm font-semibold text-gray-800">
               {pickupLocation}
             </p>
-            {/* <div className="border-b border-dotted border-black mt-1 w-full" /> */}
           </div>
           <div
             className="w-full"

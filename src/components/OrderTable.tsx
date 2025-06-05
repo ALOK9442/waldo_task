@@ -11,9 +11,9 @@ interface Order {
 }
 
 export const OrderTable = ({ orders }: { orders: Order[] }) => (
-  <div className="overflow-auto rounded-xl bg-white p-4 shadow">
+  <div className="w-full rounded-xl bg-white p-4 shadow">
     <div className="w-full overflow-x-auto">
-      <table className="min-w-max table-auto text-sm border-separate border-spacing-x-6 border-spacing-y-3 whitespace-nowrap">
+      <table className="w-full min-w-max table-auto text-sm border-separate border-spacing-x-6 border-spacing-y-3 whitespace-nowrap">
         <thead>
           <tr className="text-gray-500 text-xs uppercase">
             {orders.length > 0 &&

@@ -5,7 +5,6 @@ import Topbar from "./TopBar";
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Close sidebar on resize >= md (optional)
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 768) {
@@ -17,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="flex h-screen bg-[#f5f7fa]">
+    <div className="flex min-h-[100dvh] w-full">
       <div className="hidden md:flex flex-col w-64 bg-white">
         <Sidebar />
       </div>
@@ -34,10 +33,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </>
       )}
 
-      <div className="flex-1 flex flex-col h-screen">
+      <div className="flex-1 flex flex-col bg-[#f5f7fa] max-h-[100dvh] overflow-hidden">
         <Topbar onMenuClick={() => setSidebarOpen((prev) => !prev)} />
         <main
-          className="p-6 flex-1 overflow-y-auto overflow-x-hidden"
+          className="md:p-8 p-6 flex-1 overflow-y-auto overflow-x-hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {children}
