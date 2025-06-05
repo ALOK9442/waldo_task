@@ -56,24 +56,24 @@ export const OrderTable = ({ orders }: { orders: Order[] }) => (
                   {o.type}
                 </span>
               </TableCell>
-              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-medium text-sm">
+              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-normal text-sm">
                 {o.arrivalTime}
               </TableCell>
-              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-medium text-sm">
+              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-normal text-sm">
                 {o.weight}
               </TableCell>
-              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-medium text-sm">
+              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-normal text-sm">
                 <div className="flex items-center gap-1">
                   <span>{o.source}</span>
                   <ChevronRight className="h-5 w-5 text-gray-800 font-semibold" />
                   <span>{o.destination}</span>
                 </div>
               </TableCell>
-              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-medium text-sm">
+              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-normal text-sm">
                 {o.fee}
               </TableCell>
-              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-medium text-sm w-fit">
-                <Badge className="rounded-full bg-[#daffc9] px-2 py-1 w-fit text-xs text-[#3b9442] font-medium">
+              <TableCell className="py-3 border-b border-gray-200 text-gray-700 font-normal text-sm w-fit">
+                <Badge className="rounded-full bg-[#daffc9] px-2 py-1 w-fit text-xs text-[#3b9442] font-normal">
                   {o.status}
                 </Badge>
               </TableCell>
