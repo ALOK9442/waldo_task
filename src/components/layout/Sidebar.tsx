@@ -2,17 +2,17 @@ import {
   LayoutDashboard,
   Settings,
   ShoppingBag,
-  Rows3,
   SquareUser,
   ShoppingCart,
   MessageSquareHeart,
   ChevronDown,
+  ReceiptText,
 } from "lucide-react";
 
 const menu = [
   { name: "Dashboard", icon: LayoutDashboard, expandable: false },
   { name: "Product", icon: ShoppingBag, expandable: true },
-  { name: "Orders", icon: Rows3, expandable: true },
+  { name: "Orders", icon: ReceiptText, expandable: true },
   { name: "Customers", icon: SquareUser, expandable: true },
   { name: "Manage Reviews", icon: MessageSquareHeart, expandable: false },
   { name: "Checkout", icon: ShoppingCart, expandable: false },

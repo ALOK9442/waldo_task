@@ -2,7 +2,7 @@ export default function DashboardHeader() {
   return (
     <div className="mb-6 flex flex-col md:flex-row justify-between w-full">
       <div className="flex flex-col gap-2">
-        <h1 className="text-xl md:text-4xl font-semibold">Welcome back, Max</h1>
+        <h1 className="text-xl md:text-4xl font-semibold font-sans">Welcome back, Max</h1>
         <p className="text-gray-500 font-semibold text-xs md:text-sm">
           Here's what's happening with your store today.
         </p>

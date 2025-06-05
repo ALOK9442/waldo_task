@@ -24,15 +24,15 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
       </div>
       <div className="flex items-center gap-2 sm:gap-6 w-full md:w-auto justify-end sm:pr-14">
         <div className="relative">
-          <Bell className="text-gray-500 w-4 sm:w-6" />
-          <span className="absolute sm:top-0 sm:right-0 top-1 right-1 block sm:h-2 sm:w-2 h-1 w-1 rounded-full bg-red-500 ring-2 ring-white"></span>
+          <Bell className="text-gray-500 w-4 sm:w-4" />
+          <span className="absolute sm:top-0 sm:right-0 top-1 right-1 block sm:h-1.5 sm:w-1.5 h-1.5 w-1.5 rounded-full bg-red-500"></span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 py-2">
           <img
             src="/avatar.webp"
             alt="User"
-            width={32}
-            height={32}
+            width={34}
+            // height={36}
             className="rounded-full"
           />
           <span className="text-sm font-medium text-gray-800">Maxbert</span>
